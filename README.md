@@ -3,10 +3,15 @@ devise-scrypt [![Build Status](https://secure.travis-ci.org/capita/devise-scrypt
 
 **A [devise-encryptable](https://github.com/plataformatec/devise-encryptable) password encryptor that uses [SCrypt](https://github.com/pbhogan/scrypt)**
 
-  * [Source Code]: https://github.com/capita/devise-scrypt "Source Code @ GitHub"
-  * [API documentation]: http://rubydoc.info/gems/devise-scrypt/frames "API Documentation at Rubydoc.info"
-  * [Rubygem]: http://rubygems.org/gems/devise-scrypt "Rubygem @ rubygems.org"
-  * [Continuous Integration]: http://travis-ci.org/capita/devise-scrypt "Continuous integration @ travis-ci.org"
+  * [Source Code]
+  * [API documentation]
+  * [Rubygem]
+  * [Continuous Integration]
+
+[Source Code]: https://github.com/capita/devise-scrypt "Source Code @ GitHub"
+[API documentation]: http://rubydoc.info/gems/devise-scrypt/frames "API Documentation at Rubydoc.info"
+[Rubygem]: http://rubygems.org/gems/devise-scrypt "Rubygem @ rubygems.org"
+[Continuous Integration]: http://travis-ci.org/capita/devise-scrypt "Continuous integration @ travis-ci.org"
 
 ## Usage
 
