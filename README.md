@@ -1,9 +1,7 @@
-devise-scrypt [![Build Status](https://secure.travis-ci.org/capita/devise-scrypt.png)][Continuous Integration]
+devise-scrypt ![Build Status](https://secure.travis-ci.org/capita/devise-scrypt.png)
 =============
 
 **A [devise-encryptable](https://github.com/plataformatec/devise-encryptable) password encryptor that uses [SCrypt](https://github.com/pbhogan/scrypt)**
-
-
 
 ## Usage
 
