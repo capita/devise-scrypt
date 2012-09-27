@@ -1,7 +1,7 @@
 devise-scrypt [![Build Status](https://secure.travis-ci.org/capita/devise-scrypt.png)][Continuous Integration]
 =============
 
-**A [devise-encryptable](https://github.com/plataformatec/devise-encryptable) password encryptor that uses [SCrypt](https://github.com/pbhogan/scrypt)**
+**A [devise-encryptable] password encryptor that uses [SCrypt]**
 
   * [Source Code]
   * [API documentation]
@@ -13,15 +13,19 @@ devise-scrypt [![Build Status](https://secure.travis-ci.org/capita/devise-scrypt
 [Rubygem]: http://rubygems.org/gems/devise-scrypt "Rubygem @ rubygems.org"
 [Continuous Integration]: http://travis-ci.org/capita/devise-scrypt "Continuous integration @ travis-ci.org"
 
+[SCrypt]: https://github.com/pbhogan/scrypt "scrypt rubygem"
+[devise]: https://github.com/plataformatec/devise "devise rubygem"
+[devise-encryptable]: https://github.com/plataformatec/devise-encryptable "devise-encryptable plugin"
+
+
 ## Usage
 
-Assuming you have [`devise`](https://github.com/plataformatec/devise) (>= 2.1) and the
-[`devise-encryptable`](https://github.com/plataformatec/devise-encryptable) plugin
-set up in your application, add the gem to your `Gemfile` and `bundle`
+Assuming you have [devise] (>= 2.1) and the [devise-encryptable] plugin
+set up in your application, add `devise-scrypt` to your `Gemfile` and `bundle`:
 
     gem 'devise-scrypt'
 
-Then open up your Devise configuration, which supposedly lives at
+Then open up your [devise] configuration, which supposedly lives at
 `config/initializers/devise.rb` and configure your encryptor to be `scrypt`:
 
     # config/initializers/devise.rb
@@ -39,12 +43,20 @@ string that will be used in addition to the per-user `password_salt` when hashin
 The `config.stretches` option does not affect the calculation complexity. Instead,
 please adjust the `scrypt` defaults to your liking. Please note that in the test
 environment you will probably want to reduce complexity if you find your test suite
-slows down significantly. Please refer to the [SCrypt](https://github.com/pbhogan/scrypt)
-gem documentation about SCrypt config options and their effect.
+slows down significantly. Please refer to the [SCrypt] gem documentation about SCrypt
+config options and their effect.
 
     # Example config:
     SCrypt::Engine::DEFAULTS[:key_len] = 64
     SCrypt::Engine::DEFAULTS[:salt_size] = 32
+
+## [Compatibility][Continuous Integration]
+
+The [test suite passes against][Continuous Integration] MRI 1.8.7, 1.9.2, 1.9.3, REE,
+and Rubinius in both 1.8 and 1.9 modes.
+
+JRuby is not supported because the [SCrypt] gem is a C extension and therefore is
+incompatible with it.
 
 ## Contributing
 
